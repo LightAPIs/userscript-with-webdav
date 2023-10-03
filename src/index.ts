@@ -7,7 +7,7 @@ class Webdav {
    * @param user User name
    * @param password User password
    */
-  constructor(private domainURL: string, private user: string, private password: string) {
+  constructor(private domainURL: string = '', private user: string = '', private password: string = '') {
     if (!this.domainURL.endsWith('/')) {
       this.domainURL += '/';
     }
@@ -34,6 +34,18 @@ class Webdav {
       fileURL = fileURL.slice(1);
     }
     return this.domainURL + fileURL;
+  }
+
+  /**
+   * Update Config
+   * @param domainURL WebDAV domain
+   * @param user User name
+   * @param password User password
+   */
+  updateConfig(domainURL: string, user: string, password: string) {
+    this.domainURL = domainURL;
+    this.user = user;
+    this.password = password;
   }
 
   /**
