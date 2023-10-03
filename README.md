@@ -49,16 +49,10 @@ class Webdav {
    * @param fileURL Relative file URL
    * @returns Response
    */
-  download(fileURL: string): Promise<
-    | {
-        status: number;
-        data: string;
-      }
-    | {
-        status: number;
-        data: null;
-      }
-  >;
+  download(fileURL: string): Promise<{
+    status: number;
+    data: string;
+  }>;
   /**
    * Upload file content
    * @param fileURL Relative file URL

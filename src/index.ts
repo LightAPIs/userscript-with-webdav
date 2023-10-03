@@ -67,7 +67,7 @@ class Webdav {
     } catch {
       return {
         status: -1,
-        data: null,
+        data: '',
       };
     }
   }
