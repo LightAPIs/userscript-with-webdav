@@ -1,0 +1,13 @@
+diff --git a/index.d.ts b/index.d.ts
+index 5bd1df50a8e097e681e438716f95eca1e2dee0de..c126e589384ebcce990f2c7d994c7fca8fa81afa 100644
+--- a/index.d.ts
++++ b/index.d.ts
+@@ -73,7 +73,7 @@ declare namespace Tampermonkey {
+     type RequestEventListener<TResponse> = (this: TResponse, response: TResponse) => void;
+ 
+     interface Request<TContext = object> {
+-        method?: "GET" | "HEAD" | "POST";
++        method?: 'GET' | 'HEAD' | 'POST' | 'PUT';
+         /** The destination URL */
+         url: string;
+         /**

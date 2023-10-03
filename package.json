@@ -1,0 +1,40 @@
+{
+  "name": "userscript-with-webdav",
+  "type": "module",
+  "private": false,
+  "version": "0.1.0",
+  "description": "Connect WebDAV in the Tampermonkey/Violentmonkey script",
+  "author": "Light",
+  "license": "MIT",
+  "homepage": "https://github.com/LightAPIs/userscript-with-webdav",
+  "repository": "LightAPIs/userscript-with-webdav",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [
+    "webdav",
+    "userscript",
+    "tampermonkey",
+    "violentmonkey"
+  ],
+  "publishConfig": {
+    "directory": "publish"
+  },
+  "devDependencies": {
+    "@types/tampermonkey": "4.20.3",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
+    "eslint": "^8.50.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.9",
+    "vite-plugin-dts": "^3.6.0"
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@types/tampermonkey@4.20.3": "patches/@types__tampermonkey@4.20.3.patch"
+    }
+  }
+}
